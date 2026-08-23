@@ -1,10 +1,13 @@
 package com.example.post37.ui.screen
 
+import android.os.Build
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -29,6 +32,26 @@ fun BehaviorChangesScreen() {
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp),
             horizontalAlignment = Alignment.CenterHorizontally
-        ) {}
+        ) {
+            AppMemoryLimitsBlock()
+        }
+    }
+}
+
+@Composable
+@Preview(showBackground = true)
+@PreviewWrapper(ThemePreviewWrapper::class)
+fun AppMemoryLimitsBlock() {
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(8.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.CINNAMON_BUN) {
+            Text(text = stringResource(R.string.bc_app_memory_limited))
+            Text(text = stringResource(R.string.bc_app_memory_limited_hint))
+        } else {
+            Text(text = stringResource(R.string.bc_app_memory_limited_by_class))
+        }
     }
 }

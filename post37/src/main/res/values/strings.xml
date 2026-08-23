@@ -3,4 +3,9 @@
 
     <!-- screen labels -->
     <string name="label_behavior_changes">Behavior Changes</string>
+    
+    <!-- behavior changes -->
+    <string name="bc_app_memory_limited">App memory is limited based on your RAM</string>
+    <string name="bc_app_memory_limited_by_class">App memory is limited by app memory class</string>
+    <string name="bc_app_memory_limited_hint">You can check the limiter via adb shell am memory-limiter status</string>
 </resources>

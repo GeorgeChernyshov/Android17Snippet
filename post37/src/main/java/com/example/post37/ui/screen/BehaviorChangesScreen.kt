@@ -1,16 +1,18 @@
 package com.example.post37.ui.screen
 
+import android.content.Intent
 import android.os.Build
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.safeDrawingPadding
+import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewWrapper
@@ -23,6 +25,8 @@ import com.example.post37.ui.theme.ThemePreviewWrapper
 @PreviewWrapper(ThemePreviewWrapper::class)
 @Composable
 fun BehaviorChangesScreen() {
+    val context = LocalContext.current
+
     Scaffold(
         topBar = { AppBar(name = stringResource(R.string.label_behavior_changes)) }
     ) { paddingValues ->
@@ -34,6 +38,13 @@ fun BehaviorChangesScreen() {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             AppMemoryLimitsBlock()
+            Button(onClick = {
+                context.startActivity(
+                    Intent(context, ImeVisibilityActivity::class.java)
+                )
+            }) {
+                Text(stringResource(R.string.bc_ime_visibility_nav))
+            }
         }
     }
 }

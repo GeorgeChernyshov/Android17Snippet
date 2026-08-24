@@ -24,6 +24,11 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".ui.screen.ImeVisibilityActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Android17Snippet" />
+
     </application>
 
 </manifest>

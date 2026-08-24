@@ -3,9 +3,18 @@
 
     <!-- screen labels -->
     <string name="label_behavior_changes">Behavior Changes</string>
+
+    <!-- common buttons -->
+    <string name="back_button">Back</string>
     
     <!-- behavior changes -->
     <string name="bc_app_memory_limited">App memory is limited based on your RAM</string>
     <string name="bc_app_memory_limited_by_class">App memory is limited by app memory class</string>
     <string name="bc_app_memory_limited_hint">You can check the limiter via adb shell am memory-limiter status</string>
+    <string name="bc_ime_visibility_compose_hint">Note that Compose manages keyboard separately, so this is not applicable</string>
+    <string name="bc_ime_visibility_gone">Keyboard should be gone</string>
+    <string name="bc_ime_visibility_hint">Open the keyboard by tapping the field below and turn the screen</string>
+    <string name="bc_ime_visibility_input_hint">Type here</string>
+    <string name="bc_ime_visibility_nav">IME visibility changes</string>
+    <string name="bc_ime_visibility_stayed">Keyboard should still be opened</string>
 </resources>

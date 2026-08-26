@@ -19,6 +19,7 @@ import androidx.compose.ui.tooling.preview.PreviewWrapper
 import androidx.compose.ui.unit.dp
 import com.example.post37.R
 import com.example.post37.ui.components.AppBar
+import com.example.post37.ui.navigation.Screen
 import com.example.post37.ui.theme.ThemePreviewWrapper
 
 @Preview
@@ -28,7 +29,7 @@ fun BehaviorChangesScreen() {
     val context = LocalContext.current
 
     Scaffold(
-        topBar = { AppBar(name = stringResource(R.string.label_behavior_changes)) }
+        topBar = { AppBar(name = stringResource(Screen.BehaviorChanges.resourceId)) }
     ) { paddingValues ->
         Column(
             modifier = Modifier

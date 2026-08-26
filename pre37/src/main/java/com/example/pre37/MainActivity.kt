@@ -1,4 +1,4 @@
-package com.example.post37
+package com.example.pre37
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -8,9 +8,9 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.post37.ui.navigation.Screen
-import com.example.post37.ui.screen.BehaviorChangesScreen
-import com.example.post37.ui.theme.Android17SnippetTheme
+import com.example.pre37.ui.navigation.Screen
+import com.example.pre37.ui.screen.BackgroundAudioScreen
+import com.example.pre37.ui.theme.Android17SnippetTheme
 
 class MainActivity : ComponentActivity() {
 
@@ -27,10 +27,10 @@ class MainActivity : ComponentActivity() {
         Android17SnippetTheme {
             NavHost(
                 navController = navController,
-                startDestination = Screen.BehaviorChanges
+                startDestination = Screen.BackgroundAudio
             ) {
-                composable<Screen.BehaviorChanges> {
-                    BehaviorChangesScreen()
+                composable<Screen.BackgroundAudio> {
+                    BackgroundAudioScreen()
                 }
             }
         }

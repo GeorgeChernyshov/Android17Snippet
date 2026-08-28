@@ -8,6 +8,12 @@ import kotlinx.serialization.Serializable
 sealed class Screen(val route: String, @StringRes val resourceId: Int) {
 
     @Serializable
+    data object BackgroundAudio : Screen(
+        route = "backgroundAudio",
+        resourceId = R.string.label_background_audio
+    )
+
+    @Serializable
     data object BehaviorChanges : Screen(
         route = "behaviorChanges",
         resourceId = R.string.label_behavior_changes

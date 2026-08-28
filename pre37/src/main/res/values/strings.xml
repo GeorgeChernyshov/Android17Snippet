@@ -3,4 +3,20 @@
 
     <!-- screen labels -->
     <string name="label_background_audio">Background Audio</string>
+
+    <!-- background audio -->
+    <string name="background_audio_hint">This is a demonstration of different scenarios of working with background audio. All these buttons play the sound in the background, but they do it differently. All these buttons will background your app, request audio focus and play the sound, changing the volume up and down.</string>
+    <string name="background_audio_hint_2">To see audio focus change, play some other audio in the background or in PiP mode.</string>
+    <string name="background_audio_no_fgs">Play audio in background directly</string>
+    <string name="background_audio_no_fgs_allowed">This should be allowed on your device</string>
+    <string name="background_audio_no_fgs_hint">This button will try to play background sound directly</string>
+    <string name="background_audio_no_fgs_restricted">This is restricted on Android 17 onwards</string>
+    <string name="background_audio_no_wiu">Play audio in service without while-in-use capabilities</string>
+    <string name="background_audio_no_wiu_hint">This button will try to play background sound in a separate service, which is allowed in new Androids</string>
+
+    <!-- notifications -->
+    <string name="notification_audio_title">Background audio demo</string>
+    <string name="notification_audio_text">Running the audio hardening test</string>
+    <string name="notification_channel_name">Notification Channel</string>
+    <string name="notification_channel_description">Channel description</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.pre37.ui.screen
+package com.example.post37.ui.screen
 
 import android.content.Intent
 import android.os.Build
@@ -20,13 +20,13 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewWrapper
 import androidx.compose.ui.unit.dp
-import com.example.pre37.R
-import com.example.pre37.audio.AudioPlayerInteractor
-import com.example.pre37.audio.AudioPlayerService
-import com.example.pre37.ui.components.AppBar
-import com.example.pre37.ui.components.Block
-import com.example.pre37.ui.navigation.Screen
-import com.example.pre37.ui.theme.ThemePreviewWrapper
+import com.example.post37.R
+import com.example.post37.audio.AudioPlayerInteractor
+import com.example.post37.audio.AudioPlayerService
+import com.example.post37.ui.components.AppBar
+import com.example.post37.ui.components.Block
+import com.example.post37.ui.navigation.Screen
+import com.example.post37.ui.theme.ThemePreviewWrapper
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlin.time.Duration.Companion.milliseconds

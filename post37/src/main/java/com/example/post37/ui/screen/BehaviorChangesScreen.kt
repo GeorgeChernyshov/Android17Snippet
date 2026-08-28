@@ -19,13 +19,12 @@ import androidx.compose.ui.tooling.preview.PreviewWrapper
 import androidx.compose.ui.unit.dp
 import com.example.post37.R
 import com.example.post37.ui.components.AppBar
+import com.example.post37.ui.components.Block
 import com.example.post37.ui.navigation.Screen
 import com.example.post37.ui.theme.ThemePreviewWrapper
 
-@Preview
-@PreviewWrapper(ThemePreviewWrapper::class)
 @Composable
-fun BehaviorChangesScreen() {
+fun BehaviorChangesScreen(onNextClick: () -> Unit) {
     val context = LocalContext.current
 
     Scaffold(
@@ -46,6 +45,10 @@ fun BehaviorChangesScreen() {
             }) {
                 Text(stringResource(R.string.bc_ime_visibility_nav))
             }
+
+            Button(onClick = onNextClick) {
+                Text(stringResource(R.string.button_next))
+            }
         }
     }
 }
@@ -53,17 +56,18 @@ fun BehaviorChangesScreen() {
 @Composable
 @Preview(showBackground = true)
 @PreviewWrapper(ThemePreviewWrapper::class)
-fun AppMemoryLimitsBlock() {
-    Column(
-        modifier = Modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(8.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.CINNAMON_BUN) {
-            Text(text = stringResource(R.string.bc_app_memory_limited))
-            Text(text = stringResource(R.string.bc_app_memory_limited_hint))
-        } else {
-            Text(text = stringResource(R.string.bc_app_memory_limited_by_class))
-        }
+fun AppMemoryLimitsBlock() = Block {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.CINNAMON_BUN) {
+        Text(text = stringResource(R.string.bc_app_memory_limited))
+        Text(text = stringResource(R.string.bc_app_memory_limited_hint))
+    } else {
+        Text(text = stringResource(R.string.bc_app_memory_limited_by_class))
     }
+}
+
+@Preview
+@PreviewWrapper(ThemePreviewWrapper::class)
+@Composable
+fun BehaviorChangesScreenPreview() {
+    BehaviorChangesScreen(onNextClick = {})
 }

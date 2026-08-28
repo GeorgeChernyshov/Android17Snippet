@@ -9,6 +9,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.post37.ui.navigation.Screen
+import com.example.post37.ui.screen.BackgroundAudioScreen
 import com.example.post37.ui.screen.BehaviorChangesScreen
 import com.example.post37.ui.theme.Android17SnippetTheme
 
@@ -29,8 +30,14 @@ class MainActivity : ComponentActivity() {
                 navController = navController,
                 startDestination = Screen.BehaviorChanges
             ) {
+                composable<Screen.BackgroundAudio> {
+                    BackgroundAudioScreen()
+                }
+
                 composable<Screen.BehaviorChanges> {
-                    BehaviorChangesScreen()
+                    BehaviorChangesScreen(
+                        onNextClick = { navController.navigate(Screen.BackgroundAudio) }
+                    )
                 }
             }
         }
